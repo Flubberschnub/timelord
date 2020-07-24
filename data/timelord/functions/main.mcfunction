@@ -8,6 +8,6 @@ execute at @e[tag=createschism,limit=1] run playsound minecraft:block.beacon.act
 kill @e[tag=createschism]
 execute at @e[tag=schism] run spreadplayers ~ ~ 0 1000 false @e[distance=..0.5,tag=!schism]
 execute at @e[tag=schism] run particle minecraft:mycelium ~ ~ ~ 3 0 3 0.5 20
-execute at @e[tag=schism] run scoreboard players add @e[distance=..10] regenergy 2
-execute at @e[tag=schism] as @e[distance=..3,tag=!timelord,tag=!schism,type=!item,scores={regenergy=1000..}] run function timelord:becometimelord
+execute at @e[tag=schism] run scoreboard players add @a[distance=..10] regenergy 2
+execute at @e[tag=schism] as @a[distance=..3,tag=!timelord,tag=!schism,scores={regenergy=1000..}] run function timelord:becometimelord
 execute at @e[tag=schism] if block ~ ~-1 ~ air run kill @e[tag=schism,limit=1,sort=nearest]

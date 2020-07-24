@@ -20,10 +20,10 @@ execute unless entity @s[scores={regenning=1..}] run effect give @s[tag=!overdri
 execute store result score @s timedamagefluid run scoreboard players get @s timelordamage
 execute store result score @s halfhearts run scoreboard players operation @s timedamagefluid /= @s damagedivisor
 execute as @s[tag=!overdrive,scores={regenergy=1000..}] unless entity @s[scores={regenning=1..}] unless entity @s[scores={timelordcrouch=1..}] if score @s Health <= @s halfhearts run function timelord:regenerate
-execute as @s[tag=!overdrive,scores={regenergy=1000..,timelordcrouch=1..}] unless entity @s[scores={regenning=1..}] run function timelord:damage
 execute as @s[tag=!overdrive,scores={regenergy=..1000}] unless entity @s[scores={regenning=1..}] if score @s Health <= @s halfhearts run kill @s
+#execute as @s[tag=!overdrive,scores={regenergy=1000..,timelordcrouch=1..}] unless entity @s[scores={regenning=1..}] run function timelord:damage
 execute as @s[tag=!overdrive,scores={halfhearts=1..}] unless entity @s[scores={regenning=1..}] if score @s Health > @s halfhearts run function timelord:damage
-scoreboard players reset @s halfhearts
+#scoreboard players reset @s halfhearts
 scoreboard players reset @s timedamagefluid
 #scoreboard players operation @s healthdamage = @s timelordamage
 #execute if score @s timelordamage matches 12.. if entity @s[nbt={HurtTime:0s}] as @s run function timelord:damage

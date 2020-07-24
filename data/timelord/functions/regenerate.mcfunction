@@ -5,10 +5,10 @@ execute at @s run particle flame ~ ~ ~ 1 1 1 0 10000 normal
 execute at @s run particle flame ~ ~ ~ 1 1 1 1 10000 normal
 execute at @s run particle lava ~ ~ ~ 1 1 1 0 100
 execute at @s run particle flash ~ ~ ~
-effect give @s health_boost 1000000 4 true
+attribute @s minecraft:generic.max_health base set 40
 effect give @s minecraft:regeneration 5 10 true
 effect give @s minecraft:slowness 11 5 true
-effect give @s minecraft:resistance 10 0 true
+effect give @s minecraft:resistance 5 255 true
 effect give @s minecraft:fire_resistance 10 0 true
 execute as @s[scores={regendelay=20..39}] at @s run summon creeper ~ ~ ~ {Silent:1b,NoAI:1b,Fuse:0,ExplosionRadius:1b,ignited:1b}
 execute as @s[scores={regendelay=40..59}] at @s run summon creeper ~ ~ ~ {Silent:1b,NoAI:1b,Fuse:0,ignited:1b}
